@@ -3,7 +3,8 @@ import numpy as np
 
 class Die():
     '''
-    A class to represent a 'die' and pull a random sample from the die. Die defaults to equal weights, or can be weighted to favor some values more than others. 
+    A class to represent a 'die' and pull a random sample from the die. Die defaults to equal weights, or can be weighted to favor some values 
+    more than others. 
 
     Attributes: 
     ----------
@@ -14,13 +15,13 @@ class Die():
     --------
         change_weight(face_val, new_weight) 
             changes the weight of the indicated face
-            
+ 
         roll(num_rolls = 1)
             returns a weighted random sample of rolls from the faces with replacement 
             
         show_die()
             returns the dataframe with the current face and weight values
-    '''    
+    '''
     def __init__(self, faces):
         '''
         Constructs all the necessary attributes for the die object.
@@ -50,10 +51,10 @@ class Die():
             None
         '''
         ##parameter errors
-        if face_val not in self._die_df_['face']:
-            return "Error: value is not on die. Please enter a value on the die."
-        else:
-            next
+        # if face_val not in self._die_df_['face']:
+        #     return "Error: value is not on die. Please enter a value on the die."
+        # else:
+        #     next
         if type(new_weight) != 'float' and type(new_weight) != 'int':
             float(new_weight)
         
@@ -93,7 +94,7 @@ class Die():
 
 class Game():
     '''
-     A class to represent a game where 1 or more die are rolled. 
+    A class to represent a game where 1 or more die are rolled. 
 
     Attributes: 
     ----------
@@ -109,14 +110,14 @@ class Game():
     '''
     
     def __init__(self, dice):
-         '''
+    '''
         Constructs all the necessary attributes for the Game object. Checks that all die have the same number of faces
 
         Parameters
         ----------
             dice : list(Die objects)
                 a list of already initiated Die objects - all Die must have the same number of faces        
-        '''
+    '''        
         self.dice = dice
         
         #checks to make sure that all die have same number of faces
@@ -124,8 +125,8 @@ class Game():
         self._play_df_ = pd.DataFrame()
         for d in dice:
             if len(d.show_die()) != faces:
-                return "Error: dice must have the same number of faces."
-            
+                print("Error: dice must have the same number of faces.")
+
     def play(self, rolls):
         '''
         Rolls all of the die in the dice list. Saves results in a private dataframe.
