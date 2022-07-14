@@ -1,0 +1,13 @@
+test_change_weight (__main__.MonteCarloSimulatorTestSuite) ... ok
+test_combo (__main__.MonteCarloSimulatorTestSuite) ... ok
+test_face_counts_per_roll (__main__.MonteCarloSimulatorTestSuite) ... ok
+test_jackpot (__main__.MonteCarloSimulatorTestSuite) ... ok
+test_play (__main__.MonteCarloSimulatorTestSuite) ... ok
+test_roll (__main__.MonteCarloSimulatorTestSuite) ... ok
+test_show_die (__main__.MonteCarloSimulatorTestSuite) ... ok
+test_show_game (__main__.MonteCarloSimulatorTestSuite) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.043s
+
+OK
