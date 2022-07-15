@@ -1,4 +1,4 @@
-from MonteCarlo import MonteCarloSimulator as MC
+from MonteCarlo import MonteCarlo as MC
 import pandas as pd
 import unittest
 
