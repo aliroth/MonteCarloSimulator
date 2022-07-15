@@ -5,27 +5,22 @@ class Die():
     '''
     A class to represent a 'die' and pull a random sample from the die. Die defaults to equal weights, or can be weighted to favor some values 
     more than others. 
-
         Attributes: 
         ----------
         face (np.array) : an array of strings or numbers that represent the faces of die
         weight (np.array(float)) : an array of weights for corresponding faces. Default 1.0, can be change with change_weight()
-
         Methods:
         --------
         change_weight(face_val, new_weight) 
             changes the weight of the indicated face
-
         roll(num_rolls = 1)
             returns a weighted random sample of rolls from the faces with replacement 
-
         show_die()
             returns the dataframe with the current face and weight values
     '''
     def __init__(self, faces):
         '''
         Constructs all the necessary attributes for the die object.
-
         Parameters
         ----------
             faces : np.array(str or int)
@@ -39,7 +34,6 @@ class Die():
     def change_weight(self, face_val, new_weight):
         '''
         Changes the weighting of the indicated face.
-
         Parameters
         ----------
             face_val : str or int
@@ -66,7 +60,6 @@ class Die():
     def roll(self, num_rolls = 1):
         '''
         Creates a weighted random sample of size num_rolls from the faces of the die with replacement.
-
         Parameters
         ----------
             num_rolls : int
@@ -81,11 +74,9 @@ class Die():
     def show_die(self):
         '''
         Shows current faces and weights on die.
-
         Parameters
         ----------
             None
-
         Returns
         -------
         _die_df_ (pd.DataFrame) : Dataframe containing current face and weight values.
@@ -95,16 +86,13 @@ class Die():
 class Game():
     '''
     A class to represent a game where 1 or more die are rolled. 
-
         Attributes: 
         ----------
             dice (list(Die objects)) : a list of already initiated Die objects
-
         Methods:
         --------
             play(rolls) 
                 rolls the die in dice rolls number of times
-
             show_game(show = "wide")
                 returns a dataframe of the most recent play in a wide (default) or narrow format
     '''
@@ -112,7 +100,6 @@ class Game():
     def __init__(self, dice):
         '''
         Constructs all the necessary attributes for the Game object. Checks that all die have the same number of faces
-
         Parameters
         ----------
             dice : list(Die objects)
@@ -130,12 +117,10 @@ class Game():
     def play(self, rolls):
         '''
         Rolls all of the die in the dice list. Saves results in a private dataframe.
-
         Parameters
         ----------
             rolls : int
                 number of times each die is to be rolled
-
         Returns
         -------
             None
@@ -157,12 +142,10 @@ class Game():
     def show_game(self, show = "wide"):
         '''
         Shows results of the most recent play in a dataframe. Can be displayed as a wide table (default) or a narrow table.
-
         Parameters
         ----------
             show : str
                 "wide" or "narrow", default = "wide"
-
         Returns
         -------
             _play_df_ (pd.DataFrame) : Dataframe containing results of most recent play.
@@ -180,28 +163,23 @@ class Game():
             return 'Error: enter a valid table type, "narrow" or "wide".'
         
 class Analyzer():
-        '''
-        A class to analyze the a Game object where 1 or more Die objects are rolled to create a random sample.
-
-        Attributes: 
-        ----------
-            game (Game) : a Game object that has been played
-
-        Methods:
-        --------
-            jackpot() 
-                returns the number of times all die roll the same value
-
-            combo()
-                returns a dataframe with all the combinations of face values rolled and the counts for each
-
-            face_counts_per_roll()
-                returns a dataframe with a count for each face on each roll
-        '''    
+    '''
+    A class to analyze the a Game object where 1 or more Die objects are rolled to create a random sample.
+    Attributes: 
+    ----------
+        game (Game) : a Game object that has been played
+    Methods:
+    --------
+        jackpot() 
+            returns the number of times all die roll the same value
+        combo()
+            returns a dataframe with all the combinations of face values rolled and the counts for each
+        face_counts_per_roll()
+            returns a dataframe with a count for each face on each roll
+    '''    
     def __init__(self, game):
         '''
         Constructs all the necessary attributes for the Analyzer object.
-
         Parameters
         ----------
             game : Game object
@@ -214,11 +192,9 @@ class Analyzer():
     def jackpot(self):
         '''
         Determines the number of "jackpots" in a roll - where all die roll the same face value. Returns the number of jackpots in the game.
-
         Parameters
         ----------
             None
-
         Returns
         -------
             int : number of jackpots rolled in game
@@ -254,11 +230,9 @@ class Analyzer():
     def combo(self):
         '''
         Returns a dataframe with all combinations of face values rolled and cooresponding counts for each combination.
-
         Parameters
         ----------
             None
-
         Returns
         -------
             face_df (pd.DataFrame) : combinations of face values and counts
@@ -272,11 +246,9 @@ class Analyzer():
     def face_counts_per_roll(self):
         '''
         Returns a dataframe with number or times each face value was rolled in each roll.
-
         Parameters
         ----------
             None
-
         Returns
         -------
             f_count (pd.DataFrame) : count of each face value for each roll
