@@ -275,7 +275,7 @@ Files incuded in this package:
 
 - MonteCarlo.py
 - montecarlo_demo.ipynb
-- FinalProjectSubmissionTemplate.ipynb
+- final-project-submission.ipynb
 - MonteCarloSimulatorTestSuite.py
 - MonteCarloSimulator_testresults.txt
 - __init__.py
