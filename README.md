@@ -26,7 +26,7 @@ git clone https://github.com/aliroth/MonteCarloSimulator.git
 cd MonteCarloSimulator
 
 # install package
-pip install .
+pip install MonteCarlo
 ```
 ## &ensp;&ensp;&ensp;&ensp; importing
 ```python
@@ -168,37 +168,37 @@ A class to represent a 'die' and pull a random sample from the die. Die defaults
 
         Methods:
         --------
-        change_weight(face_val, new_weight) 
+        change_weight(face_val, new_weight)
             changes the weight of the indicated face
-            Parameters
-            ----------
-                face_val : str or int
-                    face to have weight changed
-                new_weight : float
-                    new weight for face_val
-            Returns
-            -------
-                None  
+                Parameters
+                ----------
+                    face_val : str or int
+                        face to have weight changed
+                    new_weight : float
+                        new weight for face_val
+                Returns
+                -------
+                    None  
 
         roll(num_rolls = 1)
             returns a weighted random sample of rolls from the faces with replacement 
-            Parameters
-            ----------
-            num_rolls : int
-                number of times the die is to be rolled. default = 1
-            Returns
-            -------
-                Dataframe containing results of random sample
+                Parameters
+                ----------
+                num_rolls : int
+                    number of times the die is to be rolled. default = 1
+                Returns
+                -------
+                    Dataframe containing results of random sample
 
         show_die()
             returns the dataframe with the current face and weight values
-            Parameters
-            ----------
-                None
+                Parameters
+                ----------
+                    None
 
-            Returns
-            -------
-            _die_df_ (pd.DataFrame) : Dataframe containing current face and weight values.
+                Returns
+                -------
+                _die_df_ (pd.DataFrame) : Dataframe containing current face and weight values.
 
 ## Game() class
 A class to represent a game where 1 or more die are rolled. 
@@ -211,25 +211,25 @@ A class to represent a game where 1 or more die are rolled.
         --------
             play(rolls) 
                 rolls the die in dice rolls number of times
-            Parameters
-            ----------
-                rolls : int
-                    number of times each die is to be rolled
+                Parameters
+                ----------
+                    rolls : int
+                        number of times each die is to be rolled
 
-            Returns
-            -------
-                None
+                Returns
+                -------
+                    None
 
             show_game(show = "wide")
                 returns a dataframe of the most recent play in a wide (default) or narrow format
-            Parameters
-            ----------
-                show : str
-                    "wide" or "narrow", default = "wide"
+                Parameters
+                ----------
+                    show : str
+                        "wide" or "narrow", default = "wide"
 
-            Returns
-            -------
-                _play_df_ (pd.DataFrame) : Dataframe containing results of most recent play.
+                Returns
+                -------
+                    _play_df_ (pd.DataFrame) : Dataframe containing results of most recent play.
                 
 ## Analyzer() Class
 A class to analyze the a Game object where 1 or more Die objects are rolled to create a random sample.
@@ -242,38 +242,43 @@ A class to analyze the a Game object where 1 or more Die objects are rolled to c
     --------
         jackpot() 
             returns the number of times all die roll the same value
-            Parameters
-            ----------
-                None
+                Parameters
+                ----------
+                    None
 
-            Returns
-            -------
-                int : number of jackpots rolled in game
+                Returns
+                -------
+                    int : number of jackpots rolled in game
 
         combo()
             returns a dataframe with all the combinations of face values rolled and the counts for each
-            Parameters
-            ----------
-                None
+                Parameters
+                ----------
+                    None
 
-            Returns
-            -------
-            face_df (pd.DataFrame) : combinations of face values and counts
+                Returns
+                -------
+                face_df (pd.DataFrame) : combinations of face values and counts
 
         face_counts_per_roll()
             returns a dataframe with a count for each face on each roll
-            Parameters
-            ----------
-                None
+                Parameters
+                ----------
+                    None
 
-            Returns
-            -------
-                f_count (pd.DataFrame) : count of each face value for each roll
+                Returns
+                -------
+                    f_count (pd.DataFrame) : count of each face value for each roll
 
 # Manifest
+Files incuded in this package:
 
+- MonteCarlo.py
+- montecarlo_demo.ipynb
+- FinalProjectSubmissionTemplate.ipynb
+- MonteCarloSimulatorTestSuite.py
+- MonteCarloSimulator_testresults.txt
+- __init__.py
+- setup.py
+- director.py
 
-A list of all the files in the repo.
-
-dir/ 
-clone repo, 
