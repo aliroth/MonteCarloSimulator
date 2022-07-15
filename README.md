@@ -6,7 +6,8 @@
 --------------------
 # Synopsis
 
-![](dice pic.jpg)
+![image](https://user-images.githubusercontent.com/107503014/179130008-6fe870ca-a339-4eae-8174-98b6c701d281.png)
+image source: https://www.quantamagazine.org/how-and-why-computers-roll-loaded-dice-20200708/
 
 The MonteCarlo package uses a Die() to generate a random sample of variables with replacement. According to  University of Virginia Professor Dr. Rafael Alvarado, 
 
